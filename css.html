@@ -9,21 +9,19 @@ nav: CSS
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, laboriosam placeat laudantium! Alias sunt quisquam doloribus, eveniet, minus expedita perferendis! Provident, numquam dolorem! Laborum aut in harum rerum nam, repellendus.</p>
 
 <section>
+
 	<h2>CSS Naming Convention</h2>
 
 	<p>We use a variant of BEM style syntax. </p>
-
-
-	{% highlight css %}
-.module
-.module__element
-.module--modifier
-.js-button
-	{% endhighlight %}
+	
+	<div class="code">
+	{% highlight css %}{% include css-examples/naming-convention.css %}{% endhighlight %}
+	</div>
 
 </section>
 
 <section>
+
 	<h2>Syntax</h2>
 	<ul>
 		<li>Class names are hyphen separated (not camelCase)</li>
@@ -36,20 +34,8 @@ nav: CSS
 		<li>If you have multiple rulesets separated by commas, then each ruleset should appear on its own line (see example)</li>
 	</ul>
 
-{% highlight css %}
-.my-style {
-    display: block;
-    width: 200px;
-    float: left;
-    border: 1px solid #333;
-    background: #eee;
-    font-size: 12px;
-}
- 
- 
-.my-style > h3,
-.my-style > p {
-    margin-bottom: 0;
-}
-{% endhighlight %}
+	<div class="code">
+		{% highlight css %}{% include css-examples/syntax.css %}{% endhighlight %}
+	</div>
+
 </section>

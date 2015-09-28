@@ -1,0 +1,13 @@
+.my-style {
+    display: block;
+    width: 200px;
+    float: left;
+    border: 1px solid #333;
+    background: #eee;
+    font-size: 12px;
+}
+ 
+.my-style > h3,
+.my-style > p {
+    margin-bottom: 0;
+}
