@@ -2,6 +2,7 @@
 layout: default
 title: CSS Guidelines
 nav: CSS
+weight : 15
 ---
 
 <h1>CSS guidelines</h1>
@@ -31,11 +32,22 @@ nav: CSS
 		<li>Each property on its own line</li>
 		<li>Insert a space after the colon</li>
 		<li>Colour declarations should be lowercase hex values (unless using rgba) using the short form where possible</li>
-		<li>If you have multiple rulesets separated by commas, then each ruleset should appear on its own line (see example)</li>
+		<li>If you have multiple selectors separated by commas, then each selector should appear on its own line (see example)</li>
 	</ul>
 
 	<div class="code">
 		{% highlight css %}{% include css-examples/syntax.css %}{% endhighlight %}
 	</div>
+
+</section>
+
+<section>
+	
+	<h2>Sass</h2>
+	
+	<p>Avoid excessive nesting, as it ups the specificity of your css for no good reason.</p>
+	
+
+
 
 </section>
