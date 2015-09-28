@@ -1,7 +1,7 @@
 # Site settings
 title: 			UI Guidelines
 description: 	Front-end coding guidelines for Bright Interactive
-baseurl: 		"/ui-guidelines/" # the subpath of your site, e.g. /blog/
+baseurl: 		"/ui-guidelines" # the subpath of your site, e.g. /blog/
 url: 			"http://brightinteractive.github.io" # the base hostname & protocol for your site
 twitter_username: brightinteract
 github_username:  jekyll
