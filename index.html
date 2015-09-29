@@ -1,34 +1,22 @@
 ---
 layout: default
-title: General guidelines
-nav: General
-weight : 5
+title: Bright Interactive Front-end Coding Guidelines
+nav: Home
+weight : 1
 ---
 
 <div class="home">
-    <h1 class="page-heading">General</h1>
+    <h1>Bright Interactive Front-end Coding Guidelines</h1>
 
-    <section>
-        <h2>HTML5 doctype</h2>
-        <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
-    </section>
+    {% assign pages = site.pages | sort:"weight"  %}
+    <ul>
+        {% for p in pages %}
+            {% if p.title and p.nav != 'Home' %}
+                <li><a class="page-link" {% if p.url == page.url %}class="active" {% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 
-    <section>
-        <h2>Language attribute</h2>
-        <p>From the HTML5 spec:</p>
-        <blockquote>
-            <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
-        </blockquote>
-        <p>Read more about the <code>lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>.</p>
-        <p>Head to Sitepoint for a <a href="http://reference.sitepoint.com/html/lang-codes">list of language codes</a>.</p>
 
-        <div class="example">
-            {% highlight html %}<h1>test</h1>{% endhighlight %}
-        </div>
-    </section>
-
-    <section>
-
-    </section>
 </div>
 

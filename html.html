@@ -1,0 +1,27 @@
+---
+layout: default
+title: HTML guidelines
+nav: HTML
+weight : 3
+---
+
+<h1>{{ page.title }}</h1>
+
+<section>
+    <h2>HTML5 doctype</h2>
+    <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+</section>
+
+<section>
+    <h2>Language attribute</h2>
+    <p>From the HTML5 spec:</p>
+    <blockquote>
+        <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
+    </blockquote>
+    <p>Read more about the <code>lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>.</p>
+    <p>Head to Sitepoint for a <a href="http://reference.sitepoint.com/html/lang-codes">list of language codes</a>.</p>
+
+    <div class="example">
+        {% highlight html %}<h1>test</h1>{% endhighlight %}
+    </div>
+</section>
