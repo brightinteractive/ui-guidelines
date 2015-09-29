@@ -5,6 +5,7 @@
 ul.file-system {
     list-style-type: none;
     margin: 0 0 15px;
+    line-height: normal;
 
     ul {
         list-style-type: none;
@@ -13,7 +14,7 @@ ul.file-system {
     }
 
     li {
-
+        margin-bottom: 8px;
     }
 }
 
@@ -21,5 +22,20 @@ ul.file-system {
     background: url(../img/folder.svg) no-repeat;
     background-size: 20px 20px;
     padding: 0 0 0 27px;
+    
+    .file-system--folder span {
+
+        // Not entirely happy with how this looks at the moment...
+
+        opacity: 0.5;
+        border-radius: 4px;
+        padding: 2px 5px;
+        background: #2ab0be;
+        color: #fff;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
