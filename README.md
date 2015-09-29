@@ -1,25 +1,27 @@
-# ui-guidelines
+# UI Guidelines
 
 
-UI guidelines is a public site hosted by github-pages using Jeckyll.
+UI guidelines is a public site hosted by github-pages using Jekyll.
+<a href="http://brightinteractive.github.io/ui-guidelines/">View the site</a>
 
-Running the site locally
+# Running the site locally
 
 
-Prerequisites
+## Prerequisites
 
-Ruby
+### Ruby
 Jekyll requires at least version <kbd>2.0.0</kbd> of Ruby. If you are on a mac
 
-Bundler
+### Bundler
 Bundler is a package manager that makes versioning Ruby software like Jekyll a lot easier if you're going to be building GitHub Pages sites locally. If you don't already have Bundler installed, you can install it by running the command gem install bundler.
 
-Jekyll
+### Jekyll
 To install the version of Jekyll that aligns with that used by github pages, go to the root of this repo and run:
+	
 	bundle install
 
 
-Running Jekyll
+## Running Jekyll
 
 To run Jekyll in a way that matches the GitHub Pages build server, run Jekyll with Bundler:
 
