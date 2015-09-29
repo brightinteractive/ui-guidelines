@@ -12,7 +12,7 @@ weight : 1
     <ul>
         {% for p in pages %}
             {% if p.title and p.nav != 'Home' %}
-                <li><a class="page-link" {% if p.url == page.url %}class="active" {% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
+                <li><a class="page-link" {% if p.url == page.url %}class="active" {% endif %} href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
             {% endif %}
         {% endfor %}
     </ul>
