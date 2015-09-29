@@ -23,7 +23,7 @@ Running Jekyll
 
 To run Jekyll in a way that matches the GitHub Pages build server, run Jekyll with Bundler:
 
-	bundle exec jekyll serve
+	bundle exec jekyll serve --baseurl ''
 
 Then your site should be available at <a href="http://localhost:4000" target="_blank">http://localhost:4000</a>
 
