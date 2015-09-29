@@ -1,0 +1,30 @@
+// BAD
+.teaser {
+    .teaser__header {
+        ...
+    }
+
+    .teaser__button {
+        ...
+        .teaser__icon {
+            ...
+        }
+    }
+}
+
+// GOOD
+.teaser {
+    ...
+}
+
+.teaser__header {
+    ...
+}
+
+.teaser__button {
+    ...
+}
+
+.teaser__icon {
+    ...
+}

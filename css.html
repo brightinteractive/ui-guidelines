@@ -45,9 +45,11 @@ weight : 15
 	
 	<h2>Sass</h2>
 	
-	<p>Avoid excessive nesting, as it ups the specificity of your css for no good reason.</p>
+	<p>Avoid excessive nesting, as it ups the specificity of your css for no good reason. This is especially the case when you are using BEM style classes for your sub-components as they will all have unique class names anyway.</p>
 	
-
+	<div class="code">
+		{% highlight scss %}{% include css-examples/nesting.scss %}{% endhighlight %}
+	</div>
 
 
 </section>
