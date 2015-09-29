@@ -1,0 +1,62 @@
+// -----------------------------------------------
+//  Some simple styles for a browser support diagram
+// -----------------------------------------------
+
+.support-level {
+    padding: $spacing-unit 0;
+
+    p {
+        clear: left;
+        margin-top: ($spacing-unit / 2);
+        margin-bottom: 0;
+    }
+}
+
+.support-level + .support-level {
+    border-top: 2px dashed $grey-color-light;
+}
+
+.support-level__browsers {
+    @include clearfix;
+}
+
+.browser {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: inline-block;
+	background: #2ab0be;
+	color: #fff;
+	text-align: center;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+}
+
+.browser + .browser {
+    margin-left: 3px;
+}
+
+.browser__note {
+    opacity: 0.8;
+}
+
+
+//  Different colours for different browser families
+// -----------------------------------------------
+
+.browser--ie {
+    background: #f78a1f;
+}
+
+.browser--ff {
+    background: #d0455b;
+}
+
+.browser--safari {
+    background: #ffb200;
+}
+
