@@ -65,6 +65,15 @@ figcaption {
  */
 ul, ol {
     margin-left: $spacing-unit;
+
+    &:last-child {
+        li {
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
 }
 
 li {
