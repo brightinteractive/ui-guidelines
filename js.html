@@ -6,3 +6,50 @@ weight : 10
 ---
 
 <h1>{{ page.title }}</h1>
+
+<section>
+    <p>Javascript should follow the following directory structure on a project</p>
+
+    <ul class="file-system">
+        <li class="file-system--folder">js
+            <ul>
+                <li class="file-system--folder">lib <span>Add javascript libraries such as jquery here</span></li>
+                <li class="file-system--folder">modules <span>Add bright custom js modules here</span></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+
+    <h2>Syntax</h2>
+    <ul>
+        <li>Use single quotes</li>
+        <li>Use camelCase for variables and function names</li>
+        <li>Opening curly bracket on same line</li>
+        <li>Indentation is 4 spaces (no tabs)</li>
+    </ul>
+
+    <div class="code">
+        {% highlight js %}{% include js-examples/syntax.js %}{% endhighlight %}
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Revealing module pattern</h2>
+    
+    <p>All code should be written using the revealing module pattern</p>
+
+    <div class="code">
+        {% highlight js %}{% include js-examples/revealing-module-pattern.js %}{% endhighlight %}
+    </div>
+
+    <p>You will need to initialise the module in your templates or another js file.</p>
+
+    <div class="code">
+        {% highlight js %}myJsModule.init();{% endhighlight %}
+    </div>
+
+</section>
