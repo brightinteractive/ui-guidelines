@@ -10,6 +10,33 @@ weight : 2
 	
 	<section>
 		<h2>Performance</h2>
+
+			<p>When developing a website or application it should be optimised for a fast loading speed across all devices.  A good benchmark of this is to use Google Page insights to measure its rating out of 100 to measure how successful this has been (always aim in the amber to green rating and never red). 
+
+			<h3>This can be achieved by ensuring the following criteria are met at a minimum:</h3>
+
+			<ul>
+				<li>Minify CSS - Minify / concat all CSS files into one minified file.</li>
+				<li>Minify HTML - Minify html output on production environment.</li>
+				<li>Minify JavaScript - Minify / concat all JS files into one minified file.</li>
+				<li>Optimise images - Optimise all images.</li>
+				<li>Size tap targets appropriately - Increase size of buttons / tap targets on touchscreen devices.</li>
+			</ul>
+
+			<h3>The following criteria can also be implemented to further increase performance if scores are very low.</h3>
+
+			<ul>
+				<li>Eliminate render-blocking JavaScript and CSS in above-the-fold content - Defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML.</li>
+				<li>Prioritize visible content - Structure your HTML to load the critical, above-the-fold content first.</li>
+			</ul>
+
+			<h3>The following should be enabled on the server / setup by hosting to complement the optimisation completed by the UI Team.</h3>
+			
+			<ul>
+				<li>Leverage browser caching - Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network.</li>
+				<li>Enable compression - Compressing resources with gzip or deflate can reduce the number of bytes sent over the network.</li>
+			</ul>
+
 	</section>
 
 	<section>

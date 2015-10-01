@@ -13,10 +13,11 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #555;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
+$heading-color:       #111;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
@@ -53,6 +54,7 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
+        "section",
         "syntax-highlighting",
         "browser-support",
         "file-system"

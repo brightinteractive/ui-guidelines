@@ -1,0 +1,21 @@
+/**
+ * Reset some basic elements
+ */
+
+section {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 3px dashed #ccc;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+
+    > :last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+}
+
