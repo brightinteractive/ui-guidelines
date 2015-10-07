@@ -15,7 +15,7 @@ $spacing-unit:     30px;
 
 $text-color:       #555;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #2ab0be;
 
 $heading-color:       #111;
 $grey-color:       #828282;
@@ -54,6 +54,8 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
+        "header",
+        "nav",
         "section",
         "syntax-highlighting",
         "browser-support",

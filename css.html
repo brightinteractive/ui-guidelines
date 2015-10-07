@@ -7,13 +7,17 @@ weight : 15
 
 <h1>{{ page.title }}</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, laboriosam placeat laudantium! Alias sunt quisquam doloribus, eveniet, minus expedita perferendis! Provident, numquam dolorem! Laborum aut in harum rerum nam, repellendus.</p>
+<ul class="contents">
+	<li><a href="#naming">BEM Naming Convention</a></li>
+	<li><a href="#syntax">Syntax</a></li>
+	<li><a href="#nesting">Nesting</a></li>
+</ul>
 
-<section>
+<section id="naming">
 
-	<h2>CSS Naming Convention</h2>
+	<h2>BEM Naming Convention</h2>
 
-	<p>We use a variant of BEM style syntax. </p>
+	<p>Use our verion of the BEM style syntax, and split components of UI up into discrete reusable modules (one sass file per module).</p>
 	
 	<div class="code">
 	{% highlight css %}{% include css-examples/naming-convention.css %}{% endhighlight %}
@@ -21,7 +25,7 @@ weight : 15
 
 </section>
 
-<section>
+<section id="syntax">
 
 	<h2>Syntax</h2>
 	<ul>
@@ -41,11 +45,11 @@ weight : 15
 
 </section>
 
-<section>
+<section id="nesting">
 	
-	<h2>Sass</h2>
+	<h2>Nesting</h2>
 	
-	<p>Avoid excessive nesting, as it ups the specificity of your css for no good reason. This is especially the case when you are using BEM style classes for your sub-components as they will all have unique class names anyway.</p>
+	<p>When using Sass, avoid excessive nesting as it increases the specificity of your css for no good reason (other than it feels good). Consider adding more BEM-style classes to avoid unecessary nesting.</p>
 	
 	<div class="code">
 		{% highlight scss %}{% include css-examples/nesting.scss %}{% endhighlight %}

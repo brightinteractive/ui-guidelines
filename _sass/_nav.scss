@@ -1,0 +1,84 @@
+// -----------------------------------------------
+//  Site navigation
+// -----------------------------------------------
+
+.nav {
+    float: right;
+    line-height: 56px;    
+}
+
+.nav__menu-icon {
+    display: none;
+}
+
+.nav__item,
+.nav__item:visited {
+    color: #fff;
+    line-height: $base-line-height;
+    opacity: 0.8;
+
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+        margin-left: 20px;
+    }
+
+    &.is-active {
+        opacity: 1;
+    }
+}
+
+.nav__item:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+
+@include media-query($on-palm) {
+    .nav {
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+    }
+
+    .nav__menu-icon {
+        display: block;
+        float: right;
+        width: 36px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
+        text-align: center;
+
+        > svg {
+            width: 18px;
+            height: 15px;
+
+            path {
+                fill: $grey-color-dark;
+            }
+        }
+    }
+
+    .nav__trigger {
+        clear: both;
+        display: none;
+    }
+
+    .nav:hover .nav__trigger {
+        display: block;
+        padding-bottom: 5px;
+    }
+
+    .nav__item {
+        display: block;
+        padding: 5px 10px;
+    }
+
+    .nav__item,
+    .nav__item:visited {
+        color: $text-color;
+    }
+}
