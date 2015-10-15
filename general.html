@@ -8,7 +8,14 @@ weight : 2
 <div class="home">
     <h1>{{ page.title }}</h1>
 	
-	<section>
+	<ul class="contents">
+		<li><a href="#perf">Performance</a></li>
+		<li><a href="#browser-support">Browser support</a></li>
+		<li><a href="#directory">Directory structure</a></li>
+		
+	</ul>
+
+	<section id="perf">
 		<h2>Performance</h2>
 
 			<p>When developing a website or application it should be optimised for a fast loading speed across all devices.  A good benchmark of this is to use Google Page insights to measure its rating out of 100 to measure how successful this has been (always aim in the amber to green rating and never red). 
@@ -39,7 +46,7 @@ weight : 2
 
 	</section>
 
-	<section>
+	<section id="browser-support">
 		<h2>Browser support</h2>
 
 		<p>This can vary depending on the requirements of a project, but our recommended level of support is as follows:</p>
@@ -83,7 +90,7 @@ weight : 2
 
 	</section>
 
-	<section>
+	<section id="directory">
 		<h2>Directory Structure</h2>
 
 		<p>Directory / file structure should be consistant across all projects and follow a similar structure to this (this assumes you are putting the files in either the root of the project or in a STATIC folder served up by the server:</p>
@@ -101,8 +108,5 @@ weight : 2
 
 	</section>
 
-	<section>
-		<h2>File-naming</h2>
-	</section>
 
 </div>

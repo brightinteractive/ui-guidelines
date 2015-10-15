@@ -7,7 +7,15 @@ weight : 10
 
 <h1>{{ page.title }}</h1>
 
-<section>
+<ul class="contents">
+    <li><a href="#directories">Directory structure</a></li>
+    <li><a href="#syntax">Syntax</a></li>
+    <li><a href="#comments">Comments</a></li>
+    <li><a href="#modules">Revealing module pattern</a></li>
+</ul>
+
+<section id="directories">
+    <h2>Directory structure</h2>
     <p>Javascript should follow the following directory structure on a project</p>
 
     <ul class="file-system">
@@ -20,11 +28,11 @@ weight : 10
     </ul>
 </section>
 
-<section>
+<section id="syntax">
 
     <h2>Syntax</h2>
     <ul>
-        <li>Use single quotes</li>
+        <li>Use single quotes for strings</li>
         <li>Use camelCase for variables and function names</li>
         <li>Opening curly bracket on same line</li>
         <li>Indentation is 4 spaces (no tabs)</li>
@@ -36,7 +44,19 @@ weight : 10
 
 </section>
 
-<section>
+<section id="comments">
+    
+    <h2>Comments</h2>
+
+    <p>Use <kbd>//</kbd> for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.</p>
+
+    <p>The following Gists provide sublime text snippets for top-level (tab trigger = <kbd>cb</kbd>) and second level (tab trigger = <kbd>cb2</kbd>) multi-line comments.</p>
+
+    {% gist benbrowning/e07ac1fbb769a7f809dd %}
+
+</section>
+
+<section id="modules">
 
     <h2>Revealing module pattern</h2>
     

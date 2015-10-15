@@ -136,14 +136,16 @@ blockquote {
  * Code formatting
  */
 pre,
-code {
+code,
+kbd {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #f7f7f9;
 }
 
-code {
+code,
+kbd {
     padding: 1px 5px;
 }
 

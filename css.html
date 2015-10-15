@@ -10,6 +10,7 @@ weight : 15
 <ul class="contents">
 	<li><a href="#naming">BEM Naming Convention</a></li>
 	<li><a href="#syntax">Syntax</a></li>
+	<li><a href="#comments">Comments</a></li>
 	<li><a href="#nesting">Nesting</a></li>
 </ul>
 
@@ -35,13 +36,34 @@ weight : 15
 		<li>Indentation is 4 spaces (no tabs)</li>
 		<li>Each property on its own line</li>
 		<li>Insert a space after the colon</li>
+		<li>All rules should end in a semi-colon</li>
 		<li>Colour declarations should be lowercase hex values (unless using rgba) using the short form where possible</li>
 		<li>If you have multiple selectors separated by commas, then each selector should appear on its own line (see example)</li>
+		<li>Leave a blank line between each style block</li>
 	</ul>
-
+	
+	<p>Note, if your project is using stylelint then use <a href="https://www.npmjs.com/package/stylelint-config-bright" target="_blank">stylelint-config-bright</a> to enforce the above rules.</p>
 	<div class="code">
 		{% highlight css %}{% include css-examples/syntax.css %}{% endhighlight %}
 	</div>
+
+</section>
+
+<section id="comments">
+	
+	<h2>Comments</h2>
+		
+	<p>When using Sass, always use the SASS style comments as they will be automatically stripped out of the generated CSS for you.</p>
+
+	<p>Comments should be sentence case, appear on their own line (not following some code), and do not need a colon.</p>
+	
+	<div class="code">
+		{% highlight scss %}{% include css-examples/comments.scss %}{% endhighlight %}
+	</div>
+
+	<p>The following Gists provide sublime text snippets for  top-level (tab trigger = <kbd>cb</kbd>) and second level (tab trigger = <kbd>cb2</kbd>) Sass comments. </p>
+
+	{% gist benbrowning/afa9b0018a6aa701b175 %}
 
 </section>
 
