@@ -12,4 +12,3 @@ highlighter:    pygments
 
 gems:
   - octopress-autoprefixer
-  - jekyll-contentblocks

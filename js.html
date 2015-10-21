@@ -6,76 +6,84 @@ weight : 10
 ---
 
 
-{% contentfor contents %}
-    <h1>{{ page.title }}</h1>
+<div class="toc">
+    <div class="wrapper">
+        <h1>{{ page.title }}</h1>
 
-    <ul class="contents">
-        <li><a href="#directories">Directory structure</a></li>
-        <li><a href="#syntax">Syntax</a></li>
-        <li><a href="#comments">Comments</a></li>
-        <li><a href="#modules">Revealing module pattern</a></li>
-    </ul>
-{% endcontentfor %}
+        <ul class="contents">
+            <li><a href="#directories">Directory structure</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+            <li><a href="#comments">Comments</a></li>
+            <li><a href="#modules">Revealing module pattern</a></li>
+        </ul>
+    </div>
+</div>
 
 
-<section id="directories">
+<div class="page-content">
+    <div class="wrapper">
 
-    <h2>Directory structure</h2>
-    <p>Javascript should follow the following directory structure on a project</p>
+        <section id="directories">
 
-    <ul class="file-system">
-        <li class="file-system--folder">js
-            <ul>
-                <li class="file-system--folder">lib <span>Add javascript libraries such as jquery here</span></li>
-                <li class="file-system--folder">modules <span>Add bright custom js modules here</span></li>
+            <h2>Directory structure</h2>
+            <p>Javascript should follow the following directory structure on a project</p>
+
+            <ul class="file-system">
+                <li class="file-system--folder">js
+                    <ul>
+                        <li class="file-system--folder">lib <span>Add javascript libraries such as jquery here</span></li>
+                        <li class="file-system--folder">modules <span>Add bright custom js modules here</span></li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-    </ul>
-    
-</section>
 
-<section id="syntax">
+        </section>
 
-    <h2>Syntax</h2>
-    <ul>
-        <li>Use single quotes for strings</li>
-        <li>Use camelCase for variables and function names</li>
-        <li>Opening curly bracket on same line</li>
-        <li>Indentation is 4 spaces (no tabs)</li>
-    </ul>
+        <section id="syntax">
 
-    <div class="code">
-        {% highlight js %}{% include js-examples/syntax.js %}{% endhighlight %}
+            <h2>Syntax</h2>
+            <ul>
+                <li>Use single quotes for strings</li>
+                <li>Use camelCase for variables and function names</li>
+                <li>Opening curly bracket on same line</li>
+                <li>Indentation is 4 spaces (no tabs)</li>
+            </ul>
+
+            <div class="code">
+                {% highlight js %}{% include js-examples/syntax.js %}{% endhighlight %}
+            </div>
+
+        </section>
+
+        <section id="comments">
+
+            <h2>Comments</h2>
+
+            <p>Use <kbd>//</kbd> for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.</p>
+
+            <p>The following Gists provide sublime text snippets for top-level (tab trigger = <kbd>cb</kbd>) and second level (tab trigger = <kbd>cb2</kbd>) multi-line comments.</p>
+
+            {% gist benbrowning/e07ac1fbb769a7f809dd %}
+
+        </section>
+
+        <section id="modules">
+
+            <h2>Revealing module pattern</h2>
+
+            <p>All code should be written using the revealing module pattern</p>
+
+            <div class="code">
+                {% highlight js %}{% include js-examples/revealing-module-pattern.js %}{% endhighlight %}
+            </div>
+
+            <p>You will need to initialise the module in your templates or another js file.</p>
+
+            <div class="code">
+                {% highlight js %}myJsModule.init();{% endhighlight %}
+            </div>
+
+        </section>
+
     </div>
-
-</section>
-
-<section id="comments">
-    
-    <h2>Comments</h2>
-
-    <p>Use <kbd>//</kbd> for single line comments. Place single line comments on a newline above the subject of the comment. Put an empty line before the comment.</p>
-
-    <p>The following Gists provide sublime text snippets for top-level (tab trigger = <kbd>cb</kbd>) and second level (tab trigger = <kbd>cb2</kbd>) multi-line comments.</p>
-
-    {% gist benbrowning/e07ac1fbb769a7f809dd %}
-
-</section>
-
-<section id="modules">
-
-    <h2>Revealing module pattern</h2>
-    
-    <p>All code should be written using the revealing module pattern</p>
-
-    <div class="code">
-        {% highlight js %}{% include js-examples/revealing-module-pattern.js %}{% endhighlight %}
-    </div>
-
-    <p>You will need to initialise the module in your templates or another js file.</p>
-
-    <div class="code">
-        {% highlight js %}myJsModule.init();{% endhighlight %}
-    </div>
-
-</section>
+</div>

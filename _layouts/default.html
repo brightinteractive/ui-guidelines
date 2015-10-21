@@ -6,20 +6,8 @@
     <body>
 
         {% include header.html %}
-        
-        {% ifhascontent contents %}
-        <div class="toc">
-            <div class="wrapper">
-                {% contentblock contents %}
-            </div>
-        </div>
-        {% endifhascontent %}
 
-        <div class="page-content">
-            <div class="wrapper">
-                {{ content }}
-            </div>
-        </div>
+        {{ content }}
 
         {% include footer.html %}
 

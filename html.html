@@ -5,92 +5,99 @@ nav: HTML
 weight : 3
 ---
 
-{% contentfor contents %}
-    <h1>{{ page.title }}</h1>
+<div class="toc">
+    <div class="wrapper">
+        <h1>{{ page.title }}</h1>
 
-    <ul class="contents">
-        <li><a href="#doctype">HTML5 Doctype</a></li>
-        <li><a href="#language">Language attribute</a></li>
-        <li><a href="#ie">IE compatibility</a></li>
-        <li><a href="#mobile">Mobile viewport</a></li>
-        <li><a href="#syntax">Syntax</a></li>
-        <li><a href="#type">Type attributes</a></li>
-        <li><a href="#boolean">Boolean attributes</a></li>
-    </ul>
-{% endcontentfor %}
-
-
-<section id="doctype">
-    <h2>HTML5 doctype</h2>
-    <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
-    {% highlight html %}{% include html-examples/doctype.html %}{% endhighlight %}
-    
-    
-</section>
-
-<section id="language">
-    <h2>Language attribute</h2>
-    <p>Always use a language attribute on the html tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content.</p>
-    
-    {% highlight html %}{% include html-examples/language.html %}{% endhighlight %}
-
-    <p>Declaring the language of the page is an accessibility win. It helps speech synthesis tools get the pronunciation right, helps the browser select language appropriate fonts, helps translation tools etc, etc. <a href="http://www.w3.org/International/questions/qa-lang-why.en.php">Read more on the W3 site.</a></p>
-
-</section>
-
-<section id="ie">
-    <h2>IE compatibility</h2>
-    <p>Specifiy the <code>x-ua-compatible</code> tag to encourage IE to render using it's latest rendering engine.</p> 
-    <p>This is useful for minimising the chance of your layout getting screwed by compatibility mode, <a href="https://hsivonen.fi/doctype/#ie8">though it doesn't always work</a>.</p>
-    <p>It needs to be included before all other tags except for the <code>&lt;title&gt;</code> and the other <code>&lt;meta&gt;</code> tags. <a href="https://msdn.microsoft.com/en-us/library/jj676915.aspx">Read more</a>.</p>
-    <p></p>
-    <div class="code">
-        {% highlight html %}{% include html-examples/x-ua-compatible.html %}{% endhighlight %}
-    </div>    
-</section>
-
-<section id="mobile">
-    <h2>Mobile viewport</h2>
-    <p>There are a number of ways to use the viewport meta tag, as documented in the <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Apple developer docs</a>. For most cases you can just use the following:</p>
-    <div class="code">
-        {% highlight html %}{% include html-examples/mobile.html %}{% endhighlight %}
+        <ul class="contents">
+            <li><a href="#doctype">HTML5 Doctype</a></li>
+            <li><a href="#language">Language attribute</a></li>
+            <li><a href="#ie">IE compatibility</a></li>
+            <li><a href="#mobile">Mobile viewport</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+            <li><a href="#type">Type attributes</a></li>
+            <li><a href="#boolean">Boolean attributes</a></li>
+        </ul>
     </div>
-</section>
+</div>
 
-<section id="syntax">
-    <h2>Syntax</h2>
-    <ul>
-        <li>Use double quotes for HTML attribute values. E.g: {% highlight html %}<div class="my-class">{% endhighlight %}</li>
-        <li>Use 4 spaces for indentation.</li>
-        <li>Start block elements on a new line and properly indent child elements.</li>
-        <li>Don't omit optional closing tags (e.g <code>&lt;/li&gt;</code>.</li>
-        <li>Use only lowercase.</li>
-    </ul>
 
-    <div class="code">
-        {% highlight html %}{% include html-examples/syntax.html %}{% endhighlight %}
+<div class="page-content">
+    <div class="wrapper">
+
+        <section id="doctype">
+            <h2>HTML5 doctype</h2>
+            <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+            {% highlight html %}{% include html-examples/doctype.html %}{% endhighlight %}
+
+        </section>
+
+        <section id="language">
+            <h2>Language attribute</h2>
+            <p>Always use a language attribute on the html tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content.</p>
+
+            {% highlight html %}{% include html-examples/language.html %}{% endhighlight %}
+
+            <p>Declaring the language of the page is an accessibility win. It helps speech synthesis tools get the pronunciation right, helps the browser select language appropriate fonts, helps translation tools etc, etc. <a href="http://www.w3.org/International/questions/qa-lang-why.en.php">Read more on the W3 site.</a></p>
+
+        </section>
+
+        <section id="ie">
+            <h2>IE compatibility</h2>
+            <p>Specifiy the <code>x-ua-compatible</code> tag to encourage IE to render using it's latest rendering engine.</p>
+            <p>This is useful for minimising the chance of your layout getting screwed by compatibility mode, <a href="https://hsivonen.fi/doctype/#ie8">though it doesn't always work</a>.</p>
+            <p>It needs to be included before all other tags except for the <code>&lt;title&gt;</code> and the other <code>&lt;meta&gt;</code> tags. <a href="https://msdn.microsoft.com/en-us/library/jj676915.aspx">Read more</a>.</p>
+            <p></p>
+            <div class="code">
+                {% highlight html %}{% include html-examples/x-ua-compatible.html %}{% endhighlight %}
+            </div>
+        </section>
+
+        <section id="mobile">
+            <h2>Mobile viewport</h2>
+            <p>There are a number of ways to use the viewport meta tag, as documented in the <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Apple developer docs</a>. For most cases you can just use the following:</p>
+            <div class="code">
+                {% highlight html %}{% include html-examples/mobile.html %}{% endhighlight %}
+            </div>
+        </section>
+
+        <section id="syntax">
+            <h2>Syntax</h2>
+            <ul>
+                <li>Use double quotes for HTML attribute values. E.g: {% highlight html %}<div class="my-class">{% endhighlight %}</li>
+                <li>Use 4 spaces for indentation.</li>
+                <li>Start block elements on a new line and properly indent child elements.</li>
+                <li>Don't omit optional closing tags (e.g <code>&lt;/li&gt;</code>.</li>
+                <li>Use only lowercase.</li>
+            </ul>
+
+            <div class="code">
+                {% highlight html %}{% include html-examples/syntax.html %}{% endhighlight %}
+            </div>
+        </section>
+
+        <section id="type">
+            <h2>Type attributes</h2>
+            <p>No need to specify <code>type</code> attributes for stylesheets and scripts (as long as you are using css and javascript).</p>
+            <p>Specifying type attributes in this context is not necessary as HTML5 implies text/css and text/javascript as defaults. Even older browsers are fine with this.</p>
+
+            <div class="code">
+                {% highlight html %}{% include html-examples/type-attributes.html %}{% endhighlight %}
+            </div>
+        </section>
+
+        <section id="boolean">
+            <h2>Boolean attributes</h2>
+            <p>From the <a href="https://html.spec.whatwg.org/#boolean-attributes">HTML Living Standard</a>:</p>
+
+            <blockquote>
+                The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
+            </blockquote>
+
+            <div class="code">
+                {% highlight html %}{% include html-examples/boolean-attributes.html %}{% endhighlight %}
+            </div>
+        </section>
+
     </div>
-</section>
-
-<section id="type">
-    <h2>Type attributes</h2>
-    <p>No need to specify <code>type</code> attributes for stylesheets and scripts (as long as you are using css and javascript).</p>
-    <p>Specifying type attributes in this context is not necessary as HTML5 implies text/css and text/javascript as defaults. Even older browsers are fine with this.</p>
-    
-    <div class="code">
-        {% highlight html %}{% include html-examples/type-attributes.html %}{% endhighlight %}
-    </div>
-</section>
-
-<section id="boolean">
-    <h2>Boolean attributes</h2>
-    <p>From the <a href="https://html.spec.whatwg.org/#boolean-attributes">HTML Living Standard</a>:</p>
-
-    <blockquote>
-        The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.
-    </blockquote>    
-       
-    <div class="code">
-        {% highlight html %}{% include html-examples/boolean-attributes.html %}{% endhighlight %}
-    </div>
-</section>
+</div>

@@ -6,79 +6,86 @@ weight : 15
 ---
 
 
-{% contentfor contents %}
-	<h1>{{ page.title }}</h1>
+<div class="toc">
+    <div class="wrapper">
+    	<h1>{{ page.title }}</h1>
 
-	<ul class="contents">
-		<li><a href="#naming">BEM Naming Convention</a></li>
-		<li><a href="#syntax">Syntax</a></li>
-		<li><a href="#comments">Comments</a></li>
-		<li><a href="#nesting">Nesting</a></li>
-	</ul>
-{% endcontentfor %}
+    	<ul class="contents">
+    		<li><a href="#naming">BEM Naming Convention</a></li>
+    		<li><a href="#syntax">Syntax</a></li>
+    		<li><a href="#comments">Comments</a></li>
+    		<li><a href="#nesting">Nesting</a></li>
+    	</ul>
+    </div>
+</div>
 
+<div class="page-content">
+    <div class="wrapper">
+        <section id="naming">
 
-<section id="naming">
+        	<h2>BEM Naming Convention</h2>
 
-	<h2>BEM Naming Convention</h2>
+        	<p>Use our version of the BEM style syntax, and split components of UI up into discrete reusable modules (one Sass file per module).</p>
 
-	<p>Use our version of the BEM style syntax, and split components of UI up into discrete reusable modules (one Sass file per module).</p>
-	
-	<div class="code">
-	{% highlight css %}{% include css-examples/naming-convention.css %}{% endhighlight %}
-	</div>
+        	<div class="code">
+        	{% highlight css %}{% include css-examples/naming-convention.css %}{% endhighlight %}
+        	</div>
 
-</section>
+        </section>
 
-<section id="syntax">
+        <section id="syntax">
 
-	<h2>Syntax</h2>
-	<ul>
-		<li>Class names are hyphen separated (not camelCase)</li>
-		<li>ID's should be hyphen separated</li>
-		<li>Opening curly bracket on same line as the rule set</li>
-		<li>Indentation is 4 spaces (no tabs)</li>
-		<li>Each property on its own line</li>
-		<li>Insert a space after the colon</li>
-		<li>All rules should end in a semi-colon</li>
-		<li>Colour declarations should be lowercase hex values (unless using rgba) using the short form where possible</li>
-		<li>If you have multiple selectors separated by commas, then each selector should appear on its own line (see example)</li>
-		<li>Leave a blank line between each style block</li>
-	</ul>
-	
-	<p>Note, if your project is using stylelint then use <a href="https://www.npmjs.com/package/stylelint-config-bright" target="_blank">stylelint-config-bright</a> to enforce the above rules.</p>
-	<div class="code">
-		{% highlight css %}{% include css-examples/syntax.css %}{% endhighlight %}
-	</div>
+        	<h2>Syntax</h2>
+        	<ul>
+        		<li>Class names are hyphen separated (not camelCase)</li>
+        		<li>ID's should be hyphen separated</li>
+        		<li>Opening curly bracket on same line as the rule set</li>
+        		<li>Indentation is 4 spaces (no tabs)</li>
+        		<li>Each property on its own line</li>
+        		<li>Insert a space after the colon</li>
+        		<li>All rules should end in a semi-colon</li>
+        		<li>Colour declarations should be lowercase hex values (unless using rgba) using the short form where possible</li>
+        		<li>If you have multiple selectors separated by commas, then each selector should appear on its own line (see example)</li>
+        		<li>Leave a blank line between each style block</li>
+        	</ul>
 
-</section>
+        	<p>Note, if your project is using stylelint then use <a href="https://www.npmjs.com/package/stylelint-config-bright" target="_blank">stylelint-config-bright</a> to enforce the above rules.</p>
+        	<div class="code">
+        		{% highlight css %}{% include css-examples/syntax.css %}{% endhighlight %}
+        	</div>
 
-<section id="comments">
-	
-	<h2>Comments</h2>
-		
-	<p>When using Sass, always use the Sass style comments as they will be automatically stripped out of the generated CSS for you.</p>
+        </section>
 
-	<p>Comments should be sentence case, appear on their own line (not following some code), and do not need a colon.</p>
-	
-	<div class="code">
-		{% highlight scss %}{% include css-examples/comments.scss %}{% endhighlight %}
-	</div>
+        <section id="comments">
 
-	<p>The following Gists provide sublime text snippets for  top-level (tab trigger = <kbd>cb</kbd>) and second level (tab trigger = <kbd>cb2</kbd>) Sass comments. </p>
+        	<h2>Comments</h2>
 
-	{% gist benbrowning/afa9b0018a6aa701b175 %}
+        	<p>When using Sass, always use the Sass style comments as they will be automatically stripped out of the generated CSS for you.</p>
 
-</section>
+        	<p>Comments should be sentence case, appear on their own line (not following some code), and do not need a colon.</p>
 
-<section id="nesting">
-	
-	<h2>Nesting</h2>
-	
-	<p>When using Sass, avoid excessive nesting as it increases the specificity of your css for no good reason. Consider adding more BEM-style classes to avoid unecessary nesting.</p>
-	
-	<div class="code">
-		{% highlight scss %}{% include css-examples/nesting.scss %}{% endhighlight %}
-	</div>
+        	<div class="code">
+        		{% highlight scss %}{% include css-examples/comments.scss %}{% endhighlight %}
+        	</div>
 
-</section>
+        	<p>The following Gists provide sublime text snippets for  top-level (tab trigger = <kbd>cb</kbd>) and second level (tab trigger = <kbd>cb2</kbd>) Sass comments. </p>
+
+        	{% gist benbrowning/afa9b0018a6aa701b175 %}
+
+        </section>
+
+        <section id="nesting">
+
+        	<h2>Nesting</h2>
+
+        	<p>When using Sass, avoid excessive nesting as it increases the specificity of your css for no good reason. Consider adding more BEM-style classes to avoid unecessary nesting.</p>
+
+        	<div class="code">
+        		{% highlight scss %}{% include css-examples/nesting.scss %}{% endhighlight %}
+        	</div>
+
+        </section>
+
+    </div>
+</div>
+
