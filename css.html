@@ -5,14 +5,18 @@ nav: CSS
 weight : 15
 ---
 
-<h1>{{ page.title }}</h1>
 
-<ul class="contents">
-	<li><a href="#naming">BEM Naming Convention</a></li>
-	<li><a href="#syntax">Syntax</a></li>
-	<li><a href="#comments">Comments</a></li>
-	<li><a href="#nesting">Nesting</a></li>
-</ul>
+{% contentfor contents %}
+	<h1>{{ page.title }}</h1>
+
+	<ul class="contents">
+		<li><a href="#naming">BEM Naming Convention</a></li>
+		<li><a href="#syntax">Syntax</a></li>
+		<li><a href="#comments">Comments</a></li>
+		<li><a href="#nesting">Nesting</a></li>
+	</ul>
+{% endcontentfor %}
+
 
 <section id="naming">
 
@@ -76,6 +80,5 @@ weight : 15
 	<div class="code">
 		{% highlight scss %}{% include css-examples/nesting.scss %}{% endhighlight %}
 	</div>
-
 
 </section>

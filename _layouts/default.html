@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+    {% include head.html %}
 
-  <body>
+    <body>
 
-    {% include header.html %}
+        {% include header.html %}
+        
+        {% ifhascontent contents %}
+        <div class="toc">
+            <div class="wrapper">
+                {% contentblock contents %}
+            </div>
+        </div>
+        {% endifhascontent %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+        <div class="page-content">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </div>
 
-    {% include footer.html %}
+        {% include footer.html %}
 
-  </body>
+    </body>
 
 </html>

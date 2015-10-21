@@ -5,108 +5,110 @@ nav: General
 weight : 2
 ---
 
-<div class="home">
+
+{% contentfor contents %}
     <h1>{{ page.title }}</h1>
 	
 	<ul class="contents">
 		<li><a href="#perf">Performance</a></li>
 		<li><a href="#browser-support">Browser support</a></li>
 		<li><a href="#directory">Directory structure</a></li>
-		
+	</ul>
+{% endcontentfor %}
+
+
+<section id="perf">
+	<h2>Performance</h2>
+
+	<p>When developing a website or application it should be optimised for a fast loading speed across all devices.  A good benchmark of this is to use Google Page insights to measure its rating out of 100 to measure how successful this has been (always aim in the amber to green rating and never red). 
+
+	<h3>This can be achieved by ensuring the following criteria are met at a minimum:</h3>
+
+	<ul>
+		<li>Minify CSS - Minify / concat all CSS files into one minified file.</li>
+		<li>Minify HTML - Minify html output on production environment.</li>
+		<li>Minify JavaScript - Minify / concat all JS files into one minified file.</li>
+		<li>Optimise images - Optimise all images.</li>
+		<li>Size tap targets appropriately - Increase size of buttons / tap targets on touchscreen devices.</li>
 	</ul>
 
-	<section id="perf">
-		<h2>Performance</h2>
+	<h3>The following criteria can also be implemented to further increase performance if scores are very low.</h3>
 
-			<p>When developing a website or application it should be optimised for a fast loading speed across all devices.  A good benchmark of this is to use Google Page insights to measure its rating out of 100 to measure how successful this has been (always aim in the amber to green rating and never red). 
+	<ul>
+		<li>Eliminate render-blocking JavaScript and CSS in above-the-fold content - Defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML.</li>
+		<li>Prioritize visible content - Structure your HTML to load the critical, above-the-fold content first.</li>
+	</ul>
 
-			<h3>This can be achieved by ensuring the following criteria are met at a minimum:</h3>
+	<h3>The following should be enabled on the server / setup by hosting to complement the optimisation completed by the UI Team.</h3>
+	
+	<ul>
+		<li>Leverage browser caching - Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network.</li>
+		<li>Enable compression - Compressing resources with gzip or deflate can reduce the number of bytes sent over the network.</li>
+	</ul>
 
-			<ul>
-				<li>Minify CSS - Minify / concat all CSS files into one minified file.</li>
-				<li>Minify HTML - Minify html output on production environment.</li>
-				<li>Minify JavaScript - Minify / concat all JS files into one minified file.</li>
-				<li>Optimise images - Optimise all images.</li>
-				<li>Size tap targets appropriately - Increase size of buttons / tap targets on touchscreen devices.</li>
-			</ul>
+</section>
 
-			<h3>The following criteria can also be implemented to further increase performance if scores are very low.</h3>
+<section id="browser-support">
 
-			<ul>
-				<li>Eliminate render-blocking JavaScript and CSS in above-the-fold content - Defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML.</li>
-				<li>Prioritize visible content - Structure your HTML to load the critical, above-the-fold content first.</li>
-			</ul>
+	<h2>Browser support</h2>
 
-			<h3>The following should be enabled on the server / setup by hosting to complement the optimisation completed by the UI Team.</h3>
-			
-			<ul>
-				<li>Leverage browser caching - Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network.</li>
-				<li>Enable compression - Compressing resources with gzip or deflate can reduce the number of bytes sent over the network.</li>
-			</ul>
+	<p>This can vary depending on the requirements of a project, but our recommended level of support is as follows:</p>
 
-	</section>
+	<div class="support-level">
+		<h3>Full support</h3>
 
-	<section id="browser-support">
-		<h2>Browser support</h2>
-
-		<p>This can vary depending on the requirements of a project, but our recommended level of support is as follows:</p>
-
-		<div class="support-level">
-			<h3>Full support</h3>
-
-			<div class="support-level__browsers">
-				<span class="browser browser--ie">IE Edge</span>
-				<span class="browser browser--ie">IE 11</span>
-				<span class="browser browser--ie">IE 10</span>
-				<span class="browser browser--ie">IE 9</span>
-				<span class="browser browser--ff">Firefox <small class="browser__note">last 2 versions</small></span>
-				<span class="browser browser--safari">Safari 7</span>
-				<span class="browser">
-					Chrome
-					<small class="browser__note">latest version</small>
-				</span>
-			</div>
-			<p>All content is readable and usable. All functionality must work. Variations in presentation of content is minimised between browsers. Proactive support - these browsers will be explicitely tested.</p>
+		<div class="support-level__browsers">
+			<span class="browser browser--ie">IE Edge</span>
+			<span class="browser browser--ie">IE 11</span>
+			<span class="browser browser--ie">IE 10</span>
+			<span class="browser browser--ie">IE 9</span>
+			<span class="browser browser--ff">Firefox <small class="browser__note">last 2 versions</small></span>
+			<span class="browser browser--safari">Safari 7</span>
+			<span class="browser">
+				Chrome
+				<small class="browser__note">latest version</small>
+			</span>
 		</div>
-		<div class="support-level">
-			<h3>Partial support</h3>
-			<div class="support-level__browsers">
-				<span class="browser browser--ie">IE 8</span>
-				<span class="browser browser--safari">Safari 6</span>
-				<span class="browser">Opera</span>
-			</div>
-			<p>Content is readable and usable and navigation works. Variation in presentation is allowed. Reactive support - these browsers will not be explicitely tested, but support issues will be considered.</p>
+		<p>All content is readable and usable. All functionality must work. Variations in presentation of content is minimised between browsers. Proactive support - these browsers will be explicitely tested.</p>
+	</div>
+	<div class="support-level">
+		<h3>Partial support</h3>
+		<div class="support-level__browsers">
+			<span class="browser browser--ie">IE 8</span>
+			<span class="browser browser--safari">Safari 6</span>
+			<span class="browser">Opera</span>
 		</div>
-		<div class="support-level">
-			<h3>Not supported</h3>
-			<div class="support-level__browsers">
-				<span class="browser browser--ie">IE 7</span>
-				<span class="browser browser--ie">IE 6</span>
-				<span class="browser browser--ff">FF 4.x</span>
-				<span class="browser">All others</span>
-			</div>
-			<p>No support or testing necessary.</p>
+		<p>Content is readable and usable and navigation works. Variation in presentation is allowed. Reactive support - these browsers will not be explicitely tested, but support issues will be considered.</p>
+	</div>
+	<div class="support-level">
+		<h3>Not supported</h3>
+		<div class="support-level__browsers">
+			<span class="browser browser--ie">IE 7</span>
+			<span class="browser browser--ie">IE 6</span>
+			<span class="browser browser--ff">FF 4.x</span>
+			<span class="browser">All others</span>
 		</div>
+		<p>No support or testing necessary.</p>
+	</div>
 
-	</section>
+</section>
 
-	<section id="directory">
-		<h2>Directory Structure</h2>
+<section id="directory">
 
-		<p>Directory / file structure should be consistant across all projects and follow a similar structure to this (this assumes you are putting the files in either the root of the project or in a STATIC folder served up by the server:</p>
-		
-		<ul class="file-system">
-			<li class="file-system--folder">css</li>
-			<li class="file-system--folder">img</li>
-			<li class="file-system--folder">js
-				<ul>
-					<li class="file-system--folder">lib <span>Add javascript libraries such as jquery here</span></li>
-					<li class="file-system--folder">modules <span>Add bright custom js modules here</span></li>
-				</ul>
-			</li>
-		</ul>
+	<h2>Directory Structure</h2>
 
-	</section>
+	<p>Directory / file structure should be consistant across all projects and follow a similar structure to this (this assumes you are putting the files in either the root of the project or in a STATIC folder served up by the server:</p>
+	
+	<ul class="file-system">
+		<li class="file-system--folder">css</li>
+		<li class="file-system--folder">img</li>
+		<li class="file-system--folder">js
+			<ul>
+				<li class="file-system--folder">lib <span>Add javascript libraries such as jquery here</span></li>
+				<li class="file-system--folder">modules <span>Add bright custom js modules here</span></li>
+			</ul>
+		</li>
+	</ul>
 
+</section>
 
-</div>

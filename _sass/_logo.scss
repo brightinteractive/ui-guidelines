@@ -1,0 +1,32 @@
+// ------------------------------------------------------------------
+//  Bright Interactive logo styles
+// ------------------------------------------------------------------
+
+.logo {
+    font-family: $bright-font-family;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+    float: left;
+}
+
+.logo,
+.logo:visited,
+.logo:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo-strong {
+    font-weight: 400;
+    padding-right: 2px;
+}
+
+.logo-title {
+    display: block;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}

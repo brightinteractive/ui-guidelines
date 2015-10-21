@@ -5,17 +5,20 @@ nav: HTML
 weight : 3
 ---
 
-<h1>{{ page.title }}</h1>
+{% contentfor contents %}
+    <h1>{{ page.title }}</h1>
 
-<ul class="contents">
-    <li><a href="#doctype">HTML5 Doctype</a></li>
-    <li><a href="#language">Language attribute</a></li>
-    <li><a href="#ie">IE compatibility</a></li>
-    <li><a href="#mobile">Mobile viewport</a></li>
-    <li><a href="#syntax">Syntax</a></li>
-    <li><a href="#type">Type attributes</a></li>
-    <li><a href="#boolean">Boolean attributes</a></li>
-</ul>
+    <ul class="contents">
+        <li><a href="#doctype">HTML5 Doctype</a></li>
+        <li><a href="#language">Language attribute</a></li>
+        <li><a href="#ie">IE compatibility</a></li>
+        <li><a href="#mobile">Mobile viewport</a></li>
+        <li><a href="#syntax">Syntax</a></li>
+        <li><a href="#type">Type attributes</a></li>
+        <li><a href="#boolean">Boolean attributes</a></li>
+    </ul>
+{% endcontentfor %}
+
 
 <section id="doctype">
     <h2>HTML5 doctype</h2>
@@ -37,7 +40,7 @@ weight : 3
 
 <section id="ie">
     <h2>IE compatibility</h2>
-    <p>Specifiy the x-ua-compatible tag to encourage IE to render using it's latest rendering engine.</p> 
+    <p>Specifiy the <code>x-ua-compatible</code> tag to encourage IE to render using it's latest rendering engine.</p> 
     <p>This is useful for minimising the chance of your layout getting screwed by compatibility mode, <a href="https://hsivonen.fi/doctype/#ie8">though it doesn't always work</a>.</p>
     <p>It needs to be included before all other tags except for the <code>&lt;title&gt;</code> and the other <code>&lt;meta&gt;</code> tags. <a href="https://msdn.microsoft.com/en-us/library/jj676915.aspx">Read more</a>.</p>
     <p></p>
@@ -48,7 +51,7 @@ weight : 3
 
 <section id="mobile">
     <h2>Mobile viewport</h2>
-    <p>There are a number of ways to use the viewport meta tag, as documented in the <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Apple developer docs</a>. For most case you can just use the following:</p>
+    <p>There are a number of ways to use the viewport meta tag, as documented in the <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">Apple developer docs</a>. For most cases you can just use the following:</p>
     <div class="code">
         {% highlight html %}{% include html-examples/mobile.html %}{% endhighlight %}
     </div>

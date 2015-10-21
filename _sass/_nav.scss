@@ -4,7 +4,9 @@
 
 .nav {
     float: right;
-    line-height: 56px;    
+    line-height: 1;
+    padding-top: 14px;
+    font-family: $bright-font-family;
 }
 
 .nav__menu-icon {
@@ -13,23 +15,28 @@
 
 .nav__item,
 .nav__item:visited {
+    float: left;
     color: #fff;
     line-height: $base-line-height;
-    opacity: 0.8;
+    text-transform: uppercase;
+    padding: 15px 15px 30px 15px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
     // Gaps between nav items, but not on the first one
     &:not(:first-child) {
         margin-left: 20px;
     }
-
-    &.is-active {
-        opacity: 1;
-    }
 }
 
 .nav__item:hover {
     text-decoration: none;
-    opacity: 1;
+    color: #fff;
+}
+
+.nav__item.is-active {
+    background: $bright-red;
+    border-top: 1px solid lighten($bright-red, 25);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 @include media-query($on-palm) {

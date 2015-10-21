@@ -5,16 +5,21 @@ nav: JS
 weight : 10
 ---
 
-<h1>{{ page.title }}</h1>
 
-<ul class="contents">
-    <li><a href="#directories">Directory structure</a></li>
-    <li><a href="#syntax">Syntax</a></li>
-    <li><a href="#comments">Comments</a></li>
-    <li><a href="#modules">Revealing module pattern</a></li>
-</ul>
+{% contentfor contents %}
+    <h1>{{ page.title }}</h1>
+
+    <ul class="contents">
+        <li><a href="#directories">Directory structure</a></li>
+        <li><a href="#syntax">Syntax</a></li>
+        <li><a href="#comments">Comments</a></li>
+        <li><a href="#modules">Revealing module pattern</a></li>
+    </ul>
+{% endcontentfor %}
+
 
 <section id="directories">
+
     <h2>Directory structure</h2>
     <p>Javascript should follow the following directory structure on a project</p>
 
@@ -26,6 +31,7 @@ weight : 10
             </ul>
         </li>
     </ul>
+    
 </section>
 
 <section id="syntax">

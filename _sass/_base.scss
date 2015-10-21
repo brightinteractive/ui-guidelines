@@ -89,6 +89,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
+    font-family: $bright-font-family;
     font-weight: 300;
     color: $heading-color;
 }
@@ -99,11 +100,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $bright-blue;
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($bright-blue, 10%);
     }
 
     &:hover {
