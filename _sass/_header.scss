@@ -46,5 +46,27 @@
     }
 }
 
+@include media-query($on-palm) {
 
+    .header {
+        background: $bright-blue;
+        text-align: center;
+    }
 
+    .header__logo,
+    .header__nav {
+        float: none;
+        width: 100%;
+    }
+
+    .header__nav {
+        padding-top: $gutter / 2;
+        background: $bright-blue;
+        border-top: 1px solid $bright-pale-blue;
+    }
+
+    .header__nav:before {
+        display: none;
+    }
+
+}

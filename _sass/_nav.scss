@@ -3,6 +3,7 @@
 // -----------------------------------------------
 
 .nav {
+    @include clearfix;
     float: right;
     line-height: 1;
     padding-top: 14px;
@@ -15,6 +16,7 @@
 
 .nav__item,
 .nav__item:visited {
+    box-sizing: border-box;
     float: left;
     color: #fff;
     line-height: $base-line-height;
@@ -40,52 +42,16 @@
 }
 
 @include media-query($on-palm) {
+
     .nav {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-    }
-
-    .nav__menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center;
-
-        > svg {
-            width: 18px;
-            height: 15px;
-
-            path {
-                fill: $grey-color-dark;
-            }
-        }
-    }
-
-    .nav__trigger {
-        clear: both;
-        display: none;
-    }
-
-    .nav:hover .nav__trigger {
-        display: block;
-        padding-bottom: 5px;
+        float: none;
     }
 
     .nav__item {
-        display: block;
-        padding: 5px 10px;
+        width: 20%;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    .nav__item,
-    .nav__item:visited {
-        color: $text-color;
-    }
 }

@@ -30,3 +30,12 @@
     font-weight: 600;
     letter-spacing: 2px;
 }
+
+
+@include media-query($on-palm) {
+
+    .logo {
+        float: none;
+    }
+
+}
