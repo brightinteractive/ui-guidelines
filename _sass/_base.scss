@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $gutter / 2;
 }
 
 
@@ -64,7 +64,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: $gutter;
 
     &:last-child {
         li {
@@ -94,6 +94,16 @@ h1, h2, h3, h4, h5, h6 {
     color: $heading-color;
 }
 
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+
+    font-weight: 500;
+    margin-top: $gutter;
+}
+
 
 
 /**
@@ -121,7 +131,7 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    padding-left: $gutter / 2;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -167,19 +177,19 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(800px - (#{$gutter} * 2));
+    max-width:         calc(800px - (#{$gutter} * 2));
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding-right: $gutter;
+    padding-left: $gutter;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$spacing-unit}));
-        max-width:         calc(800px - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        max-width: -webkit-calc(800px - (#{$gutter}));
+        max-width:         calc(800px - (#{$gutter}));
+        padding-right: $gutter / 2;
+        padding-left: $gutter / 2;
     }
 }
 

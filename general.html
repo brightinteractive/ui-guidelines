@@ -116,5 +116,43 @@ weight : 2
 
         </section>
 
+        <section id="accessibility">
+            <h2>Accessibility</h2>
+
+            <h3>Semantics</h3>
+            <p>Use semantic headings in the correct order.</p>
+            <p>Obviously don't use tables for layout.</p>
+
+            <h3>Forms</h3>
+            <p>Make sure the tab order of your forms is logical.</p>
+            <p>Use an associated <code>&lt;label&gt;</code> for all form controls. You can either associate with a <code>for="my-input-id"</code> or by wrapping the input.</p>
+
+            <h3>Language Attribute</h3>
+            <p>Add a language attribute to the html tag to enable screen readers to use the correct pronunciation.</p>
+            {% highlight html %}{% include html-examples/language.html %}{% endhighlight %}
+
+            <h3>Aria roles</h3>
+            <p>Make use of the following Aria landmark roles</p>
+            <ul>
+                <li><code>main</code> - Main content area. Should only be used once per page. <code>&lt;main role=&quot;main&quot;&gt;</code></li>
+                <li><code>banner</code> - Use this on your global page header. <code>&lt;header role=&quot;banner&quot;&gt;</code></li>
+                <li><code>navigation</code> - Contains navigation links, e.g <code>&lt;nav role=&quot;navigation&quot;&gt;</code>.</li>
+                <li><code>contentinfo</code> -  A collection of metadata, copyright information and the like. Usually used on the footer <code>&lt;footer role=&quot;contentinfo&quot;&gt;</code></li>
+            </ul>
+
+            <h3>Colour Contrast</h3>
+
+            <p>To be AA compliant:</p>
+            <ul>
+                <li>Standard text should have a contrast ratio of at least <strong>4.5:1</strong></li>
+                <li>Large scale text can drop down to <strong>3:1</strong></li>
+                <li>Text that is part of a logo or brand name has no minimum contrast requirement.</li>
+            </ul>
+
+            <p>You can use <a href="http://leaverou.github.io/contrast-ratio/">Contrast Ratio</a> for checking this.</p>
+
+
+        </section>
+
     </div>
 </div>

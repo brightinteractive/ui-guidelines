@@ -3,11 +3,11 @@
 // -----------------------------------------------
 
 .support-level {
-    padding: $spacing-unit 0;
+    padding: $gutter 0;
 
     p {
         clear: left;
-        margin-top: ($spacing-unit / 2);
+        margin-top: ($gutter / 2);
         margin-bottom: 0;
     }
 
