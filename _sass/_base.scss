@@ -65,15 +65,6 @@ figcaption {
  */
 ul, ol {
     margin-left: $gutter;
-
-    &:last-child {
-        li {
-            &:last-child {
-                margin-bottom: 0;
-                padding-bottom: 0;
-            }
-        }
-    }
 }
 
 li {
@@ -110,7 +101,7 @@ h3 {
  * Links
  */
 a {
-    color: $bright-blue;
+    color: darken($bright-blue, 5%);
     text-decoration: none;
 
     &:visited {

@@ -4,13 +4,6 @@
 
 .header {
     background: $bright-blue;
-    background-image:
-        linear-gradient(
-          to right,
-          $bright-blue 50%,
-          $bright-pale-blue 50%
-        );
-
     color: #fff;
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -28,22 +21,6 @@
     float: right;
     width: 70%;
     padding-top: $gutter;
-    background: $bright-pale-blue;
-
-    // Context for little arrow:
-    position: relative;
-
-    &:before {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-        border-left: 20px solid $bright-blue;
-        left: 0;
-        top: 50%;
-    }
 }
 
 @include media-query($on-palm) {

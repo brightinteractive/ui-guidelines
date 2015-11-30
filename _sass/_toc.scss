@@ -14,7 +14,7 @@
     position: relative;
 
     h1 {
-        color: $bright-blue;
+        color: darken($bright-blue, 6);
         font-weight: 300;
         margin-bottom: 20px;
         line-height: 1;
@@ -46,6 +46,13 @@
         margin-bottom: 6px;
     }
 
+    &:last-child {
+        li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
     li:before {
         vertical-align: middle;
         content: '';
@@ -62,6 +69,6 @@
     }
 
     a:visited {
-        color: lighten($text-color, 15);
+        color: lighten($text-color, 10);
     }
 }

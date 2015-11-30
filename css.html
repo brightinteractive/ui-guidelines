@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CSS Guidelines
+description: Covering our BEM naming convention, syntax and other best practice
 nav: CSS
 weight : 15
 ---
@@ -28,8 +29,10 @@ weight : 15
         	<p>Use our version of the BEM style syntax, and split components of UI up into discrete reusable modules (one Sass file per module).</p>
 
         	<div class="code">
-        	{% highlight css %}{% include css-examples/naming-convention.css %}{% endhighlight %}
+        	{% highlight scss %}{% include css-examples/naming-convention.scss %}{% endhighlight %}
         	</div>
+
+            <p>If you need to provide a hook for selenium tests, then use ids.</p>
 
         </section>
 
@@ -38,7 +41,7 @@ weight : 15
         	<h2>Syntax</h2>
         	<ul>
         		<li>Class names are hyphen separated (not camelCase)</li>
-        		<li>ID's should be hyphen separated</li>
+        		<li>Do not use IDs for css selectors</li>
         		<li>Opening curly bracket on same line as the rule set</li>
         		<li>Indentation is 4 spaces (no tabs)</li>
         		<li>Each property on its own line</li>
