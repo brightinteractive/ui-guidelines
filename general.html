@@ -35,6 +35,15 @@ weight : 2
 
             <p><a href="http://learn.shayhowe.com/advanced-html-css/semantics-accessibility/">Extending Semantics &amp; Accessibility</a>.</p>
 
+            <h3>Tab order</h3>
+
+            <p>The tab order of elements on the page should be logical, going from left to right and top to bottom. Tab order is defined by the order your page's source code.</p>
+            <ul>
+                <li><code>tabindex="0"</code> - This will make an element that isn't naturally focussable (e.g. span, div, p) able to be focused. It will appear in the natural tab order of the page.</li>
+                <li><code>tabindex="-1"</code> - Using an negative number means the element will not appear in the natural tab order of the page, but it can be assigned focus using JavaScript. For example you may want to give focus to a validation error, but not have it appear in the natural tab order.</li>
+                <li><code>tabindex=">0"</code> - Any tabindex greater than 0 should be avoided, as it is necessary to add a tabindex to every focussable element on the page to maintain a sensible tab order.</li>
+            </ul>
+
 
             <h3>Forms</h3>
             <p>Make sure the tab order of your forms is logical.</p>
@@ -50,14 +59,33 @@ weight : 2
 
             <!-- TODO: What about background images? -->
 
-            <h3>Aria roles</h3>
-            <p>Make use of the following Aria landmark roles</p>
+            <h3>Aria</h3>
+
+            <p>Aria attributes are used to add in accessibilty information to elements that are missing them. First rule of aria use:</p>
+            <blockquote cite="https://rawgit.com/w3c/aria-in-html/master/index.html">
+                'If you can use a native HTML element or attribute with the semantics and behaviour you require <strong>already built in</strong>, instead of re-purposing an element and adding an ARIA role, state or property to make it accessible, <strong>then do so</strong>.'<br />
+                <cite><a href="https://rawgit.com/w3c/aria-in-html/master/index.html">Using WAI-ARIA in HTML</a></cite>
+            </blockquote>
+
+            <h4>Roles</h4>
+            <p>Make use of the following Aria landmark roles:</p>
             <ul>
                 <li><code>main</code> - Main content area. Should only be used once per page. <code>&lt;main role=&quot;main&quot;&gt;</code></li>
                 <li><code>banner</code> - Use this on your global page header. <code>&lt;header role=&quot;banner&quot;&gt;</code></li>
                 <li><code>navigation</code> - Contains navigation links, e.g <code>&lt;nav role=&quot;navigation&quot;&gt;</code>.</li>
                 <li><code>contentinfo</code> -  A collection of metadata, copyright information and the like. Usually used on the footer <code>&lt;footer role=&quot;contentinfo&quot;&gt;</code></li>
             </ul>
+
+            <h4>State</h4>
+            <p>Consider using the following attributes to improve the experience of screen readers:</p>
+            <ul>
+                <li><code>aria-invalid</code> - Use to highlight invalid input field values as the result of some validation.</li>
+                <li><code>aria-hidden</code> - Use to hide something from a screen reader. E.g. <code>&lt;i class="icon-download" aria-hidden="true"&gt;</code>. Do not use on an element that is visible <strong>and focussable</strong>.</li>
+                <li><code>aria-current</code> - Can be used to denote the current item in a breadcrumb, pagination control or navigation menu. Value can be <code>true, page, date, time</code></li>
+            </ul>
+
+            <p>See the full list of aria attributes</p>
+
 
             <h3>Colour Contrast</h3>
 
